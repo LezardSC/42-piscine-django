@@ -24,12 +24,10 @@ def my_sort():
 		'Burton': '1939',
 	}
 
-	dict(sorted(d.items()))
-	for last_name, birth_year in d.items():
-		print(f"{birth_year} : {last_name}")
-	dict(sorted(d.items(), key=lambda item: item[1]))
-	for last_name, birth_year in d.items():
-		print(f"{birth_year} : {last_name}")
+	sorted_alpha = dict(sorted(d.items()))
+	sorted_d = dict(sorted(sorted_alpha.items(), key=lambda item: item[1]))
+	for last_name, birth_year in sorted_d.items():
+		print(f"{last_name}")
 
 if __name__ == "__main__":
 	my_sort()
